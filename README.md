@@ -4,7 +4,7 @@ I handcrafted a [lvgl](https://docs.lvgl.io/8.3/intro/index.html) (Light and Ver
 [![M5Stack Tab5 LLM Client Demo video](https://img.youtube.com/vi/V6tv1Fz66Jw/default.jpg)](https://youtu.be/V6tv1Fz66Jw)
 
 ## 1. How this Project Came About?
-The M5Stack Tab5 looks is an interesting piece of hardware. I purchased one thinking that it will be fun to program it. After I purchased it, I quickly realise that using the graphics library [M5GFX](https://docs.m5stack.com/en/arduino/m5gfx/m5gfx_functions) alone is not going to cut it. I have to learn lvgl to create a usable GUI. I discovered that there aren't many Tab5 examples on the Internet to learn from. The examples I found all use a UI editor eg,[SquareLine Studio](https://squareline.io/), [LVGL Editor](https://lvgl.io/editor), etc., to create the user interface. And all they do is showing some widgets on the screen that are not functional, in other words, without a purpose. I want to start from basics to learn how to use lvgl on the Tab5 to do something useful. 
+The M5Stack Tab5 is an interesting piece of hardware. I purchased one thinking that it will be fun to program it. After I purchased it, I quickly realise that using the graphics library [M5GFX](https://docs.m5stack.com/en/arduino/m5gfx/m5gfx_functions) alone is not going to cut it. I have to learn lvgl to create a usable GUI. I discovered that there aren't many Tab5 examples on the Internet to learn from. The examples I found all use a UI editor eg,[SquareLine Studio](https://squareline.io/), [LVGL Editor](https://lvgl.io/editor), etc., to create the user interface. And all they do is showing some widgets on the screen that are not functional, in other words, without a purpose. I want to start from basics to learn how to use lvgl on the Tab5 to do something useful. 
 <BR><BR>Sometime ago, I published a project ([webui-llm-module-kit](https://github.com/AndyYuen/webui-llm-module-kit)) on Github which creates a python server running on the M5Stack LLM Module Kit to provide a web interface to interact with a LLM using websockets. I think it will be fun and instructional to create a GUI on Tab5 to do the same. Of course, Tab5 does not have a web browser. The solution is to use lvgl to create a GUI that can interact with the python server using websocket without having to change the python server at all. Just like that, this project was born. I want to learn the lvgl basics and not use any UI editors. And I want to develop it using Arduino.
 
 ## 2. Prerequisites
@@ -132,7 +132,7 @@ When you power up the Tab5, it connects to the WIFI before displaying the UI. So
 * once the websocket is connected, the "Clear" and "Submit" buttons appear near the botton left-hand-side. 
 ![Websocket Connected](images/connected.jpg)
 * you can change the ws-URI and click "Connect" to connect to another LLM Module Kit websocket if you have more that one LLM Module Kit.
-* you can enter your question for the LLM in the input textarea (on the left) and click the "Submit" button to send your question to the LLM via the python server.
+* you can enter your question for the LLM in the input textarea (on the left) and click the "Submit" button to send your question to the LLM via the python server. (The LLM appears to be tolerable of my typos ;-)
 * the "Clear" and "Submit" buttons disappear until the response from the LLM is complete.
 ![LLM Interaction](images/llmInteraction.jpg)
 * the keyboard, if not present, will apear when you touch either the ws-URI or question input textareas
